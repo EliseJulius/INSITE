@@ -79,10 +79,10 @@ button:focus-visible {
 .search-bar {
   position: relative;
 
-  width: calc(100% - 48px);
+  width: calc(100% - 64px);
   height: 58px;
 
-  margin: 28px 24px 32px;
+  margin: 28px 32px 32px;
 
   padding: 0 20px;
 
@@ -112,7 +112,7 @@ button:focus-visible {
 .search-placeholder {
   font-size: 14px;
   font-weight: 500;
-  color: #59595C;
+  color: #006CDC;
 }
 
 .search-icon {
@@ -127,7 +127,7 @@ button:focus-visible {
    ===================================================== */
 
 .section {
-  padding: 0 24px;
+  padding: 0 32px;
   margin-bottom: 30px;
 }
 
@@ -2826,6 +2826,432 @@ button:focus-visible {
     min-height: 852px;
 
     margin: 30px 0;
+
+    border-radius: 12px;
+
+    box-shadow:
+      0 20px 60px rgba(0, 0, 0, 0.2);
+
+  }
+
+}
+
+/* =====================================================
+   HOME MAP CARDS
+   ===================================================== */
+
+
+/* Section title */
+
+.map-section .section-heading {
+  justify-content: flex-start;
+  margin-bottom: 14px;
+}
+
+
+.map-section .section-heading h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+/* Orange square */
+
+.section-square {
+  width: 14px;
+  height: 14px;
+
+  display: inline-block;
+
+  background: #FF5A16;
+
+  flex-shrink: 0;
+}
+
+
+/* =====================================================
+   MAP CARD
+   ===================================================== */
+
+.map-card {
+  position: relative;
+
+  width: 100%;
+
+  overflow: hidden;
+
+  border-radius: 18px;
+
+  background: #E8E8E8;
+}
+
+
+/* =====================================================
+   DAILY / INDOOR MAP
+   ===================================================== */
+
+.daily-map-card {
+
+  height: 190px;
+
+  background: #F7DE70;
+
+}
+
+
+.daily-map-card img {
+
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+}
+
+
+/* =====================================================
+   CURRENT LOCATION MAP
+   ===================================================== */
+
+.current-location-section {
+
+  margin-top: 4px;
+
+}
+
+
+.current-map-card {
+
+  height: 260px;
+
+  background: #E8E8E8;
+
+  overflow: hidden;
+
+  touch-action: none;
+
+  cursor: grab;
+
+}
+
+
+.current-map-card:active {
+
+  cursor: grabbing;
+
+}
+
+
+.current-map-card img {
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  user-select: none;
+
+  -webkit-user-drag: none;
+
+  transform-origin: center center;
+
+  will-change: transform;
+
+  pointer-events: none;
+
+}
+
+
+/* =====================================================
+   SMALL SCREEN
+   ===================================================== */
+
+@media (max-height: 750px) {
+
+  .daily-map-card {
+    height: 175px;
+  }
+
+  .current-map-card {
+    height: 230px;
+  }
+
+}
+/* =====================================================
+   MAP CARD HOVER / CLICK
+===================================================== */
+
+.daily-map-card,
+.current-map-card {
+
+  padding: 0;
+
+  border: 3px solid transparent;
+
+  transition:
+    border-color 0.15s ease,
+    transform 0.15s ease;
+
+}
+
+
+/* Hover giống prototype */
+
+.daily-map-card:hover,
+.current-map-card:hover {
+
+  border-color: var(--blue);
+
+}
+
+
+/* Click */
+
+.daily-map-card:active,
+.current-map-card:active {
+
+  transform: scale(0.985);
+
+}
+
+
+/* =====================================================
+   OUTDOOR MAP FRAME
+===================================================== */
+
+.map-frame {
+
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 200;
+
+  width: 100%;
+  height: 100%;
+
+  max-width: 393px;
+
+  margin: 0 auto;
+
+  background: #E8E8E8;
+
+  overflow: hidden;
+
+  display: none;
+
+}
+
+
+/* Khi mở */
+
+.map-frame.active {
+
+  display: block;
+
+}
+
+
+/* =====================================================
+   MAP
+===================================================== */
+
+.map-frame-viewport {
+
+  position: absolute;
+
+  inset: 0;
+
+  overflow: hidden;
+
+  background: #E8E8E8;
+
+  touch-action: none;
+
+  cursor: grab;
+
+}
+
+
+.map-frame-viewport:active {
+
+  cursor: grabbing;
+
+}
+
+
+.map-frame-viewport img {
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  user-select: none;
+
+  -webkit-user-drag: none;
+
+  transform-origin: center center;
+
+  will-change: transform;
+
+  pointer-events: none;
+
+}
+
+
+/* =====================================================
+   SEARCH ON MAP
+===================================================== */
+
+.map-frame-search {
+
+  position: absolute;
+
+  top: 28px;
+
+  left: 24px;
+
+  width: calc(100% - 48px);
+
+  height: 48px;
+
+  padding: 0 18px 0 20px;
+
+  border-radius: 28px;
+
+  background: var(--blue);
+
+  color: white;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-end;
+
+  z-index: 10;
+
+}
+
+
+.map-frame-search span {
+
+  display: none;
+
+}
+
+
+.map-frame-search svg {
+
+  width: 22px;
+  height: 22px;
+
+}
+
+
+/* =====================================================
+   OUTDOOR TITLE
+===================================================== */
+
+.map-frame-title {
+
+  position: absolute;
+
+  top: 88px;
+
+  left: 24px;
+
+  z-index: 10;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  font-size: 18px;
+
+  color: #111;
+
+}
+
+
+.map-current-dot {
+
+  width: 12px;
+  height: 12px;
+
+  border-radius: 50%;
+
+  background: var(--blue);
+
+}
+
+
+/* =====================================================
+   BACK BUTTON
+===================================================== */
+
+.map-frame-back {
+
+  position: absolute;
+
+  top: 28px;
+
+  left: 24px;
+
+  width: 44px;
+  height: 44px;
+
+  border-radius: 50%;
+
+  background: white;
+
+  display: none;
+
+  align-items: center;
+  justify-content: center;
+
+  z-index: 20;
+
+}
+
+
+.map-frame-back svg {
+
+  width: 24px;
+  height: 24px;
+
+}
+
+
+/* =====================================================
+   DESKTOP PREVIEW
+===================================================== */
+
+@media (min-width: 600px) {
+
+  .map-frame {
+
+    margin-top: 30px;
+
+    height: 852px;
 
     border-radius: 12px;
 
