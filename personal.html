@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>INSITE — Cá nhân</title>
+
+  <!-- Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="personal.css">
+
+</head>
+
+
+<body>
+
+  <main class="personal-app">
+
+    <section class="personal-screen">
+
+
+      <!-- ==================== TOP SPACING ==================== -->
+
+      <div class="personal-top-space"></div>
+
+
+      <!-- ==================== CONTENT ==================== -->
+
+      <div class="personal-content">
+
+
+        <!-- ==================== AVATAR ==================== -->
+
+        <div class="avatar-section">
+
+          <button
+            class="avatar-button"
+            id="avatarButton"
+            type="button"
+            aria-label="Đổi ảnh đại diện"
+          >
+
+            <img
+              src="logo.svg"
+              alt="Ảnh đại diện mặc định"
+              class="default-avatar"
+            >
+
+          </button>
+
+
+          <button
+            class="change-avatar"
+            id="changeAvatar"
+            type="button"
+          >
+            Đổi ảnh đại diện
+          </button>
+
+        </div>
+
+
+        <!-- ==================== USER INFO ==================== -->
+
+        <div class="personal-fields">
+
+
+          <!-- NAME -->
+
+          <div class="personal-field">
+
+            <input
+              id="userName"
+              type="text"
+              value="Bảo Anh"
+              aria-label="Họ và tên"
+            >
+
+          </div>
+
+
+          <!-- EMAIL -->
+
+          <div class="personal-field">
+
+            <input
+              id="userEmail"
+              type="email"
+              value="Abao@gmail.com"
+              aria-label="Email"
+            >
+
+          </div>
+
+        </div>
+
+
+        <!-- ==================== MASCOT ==================== -->
+
+        <section class="mascot-section">
+
+          <h2>
+            Chọn khi hướng dẫn của bạn
+          </h2>
+
+          <p class="mascot-hint">
+            Lướt trái phải để chọn
+          </p>
+
+
+          <!-- MASCOT CAROUSEL -->
+
+          <div
+            class="mascot-carousel"
+            id="mascotCarousel"
+          >
+
+
+            <!-- LEFT -->
+
+            <button
+              class="mascot-arrow mascot-arrow-left"
+              id="mascotPrev"
+              type="button"
+              aria-label="Mascot trước"
+            >
+
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+
+                <path d="M15 18L9 12L15 6"></path>
+
+              </svg>
+
+            </button>
+
+
+            <!-- MASCOT CONTENT -->
+
+            <div
+              class="mascot-stage"
+              id="mascotStage"
+            >
+
+              <div class="mascot-name">
+                <span id="mascotName">
+                  Monki
+                </span>
+              </div>
+
+
+              <img
+                src="monki.svg"
+                alt="Monki"
+                class="mascot-image"
+                id="mascotImage"
+              >
+
+            </div>
+
+
+            <!-- RIGHT -->
+
+            <button
+              class="mascot-arrow mascot-arrow-right"
+              id="mascotNext"
+              type="button"
+              aria-label="Mascot tiếp theo"
+            >
+
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+
+                <path d="M9 18L15 12L9 6"></path>
+
+              </svg>
+
+            </button>
+
+          </div>
+
+        </section>
+
+
+        <!-- ==================== DONE ==================== -->
+
+        <button
+          class="personal-button"
+          id="personalDone"
+          type="button"
+        >
+          Xong
+        </button>
+
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <script src="personal.js"></script>
+
+</body>
+
+</html>

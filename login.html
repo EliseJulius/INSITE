@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>INSITE — Đăng nhập</title>
+
+  <!-- Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="login.css">
+
+</head>
+
+
+<body>
+
+  <main class="login-app">
+
+    <section class="login-screen">
+
+
+      <!-- ==================== HEADER ==================== -->
+
+      <header class="login-header">
+
+        <div class="login-line">
+
+          <span></span>
+          <span></span>
+
+        </div>
+
+
+        <div class="login-brand">
+          InSite
+        </div>
+
+      </header>
+
+
+      <!-- ==================== CONTENT ==================== -->
+
+      <div class="login-content">
+
+        <h1>
+          Đăng nhập vào<br>
+          tài khoản của bạn
+        </h1>
+
+        <p class="login-subtitle">
+          Nhập email và mật khẩu để đăng nhập
+        </p>
+
+
+        <!-- ==================== FORM ==================== -->
+
+        <form
+          class="login-form"
+          id="loginForm"
+        >
+
+
+          <!-- EMAIL -->
+
+          <div class="login-field">
+
+            <label for="loginEmail">
+              Email
+            </label>
+
+            <input
+              id="loginEmail"
+              name="email"
+              type="email"
+              placeholder="Abao@gmail.com"
+              autocomplete="email"
+              required
+            >
+
+          </div>
+
+
+          <!-- PASSWORD -->
+
+          <div class="login-field">
+
+            <label for="loginPassword">
+              Mật khẩu
+            </label>
+
+            <div class="input-with-icon">
+
+              <input
+                id="loginPassword"
+                name="password"
+                type="password"
+                placeholder="••••••••"
+                autocomplete="current-password"
+                required
+              >
+
+              <button
+                type="button"
+                class="password-toggle"
+                id="loginPasswordToggle"
+                aria-label="Hiện mật khẩu"
+              >
+
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                  aria-hidden="true"
+                >
+
+                  <path
+                    d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12Z"
+                  ></path>
+
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="2.5"
+                  ></circle>
+
+                </svg>
+
+              </button>
+
+            </div>
+
+          </div>
+
+
+          <!-- OPTIONS -->
+
+          <div class="login-options">
+
+            <label class="remember-check">
+
+              <input
+                type="checkbox"
+                id="rememberMe"
+              >
+
+              <span>
+                Remember me
+              </span>
+
+            </label>
+
+
+            <a
+              href="#"
+              class="forgot-link"
+              id="forgotPassword"
+            >
+              Forgot Password?
+            </a>
+
+          </div>
+
+
+          <!-- ==================== SUBMIT ==================== -->
+
+          <button
+            type="submit"
+            class="login-button"
+          >
+            Đăng nhập
+          </button>
+
+
+        </form>
+
+
+        <!-- ==================== SIGN UP ==================== -->
+
+        <p class="signup-link">
+
+          Don't have an account?
+
+          <a href="signup.html">
+            Sign Up
+          </a>
+
+        </p>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <script>
+
+    /* =====================================================
+       PASSWORD TOGGLE
+    ===================================================== */
+
+    const loginPassword =
+      document.getElementById("loginPassword");
+
+    const loginPasswordToggle =
+      document.getElementById(
+        "loginPasswordToggle"
+      );
+
+
+    loginPasswordToggle.addEventListener(
+      "click",
+      () => {
+
+        const isPassword =
+          loginPassword.type === "password";
+
+
+        loginPassword.type =
+          isPassword
+            ? "text"
+            : "password";
+
+
+        loginPasswordToggle.setAttribute(
+          "aria-label",
+          isPassword
+            ? "Ẩn mật khẩu"
+            : "Hiện mật khẩu"
+        );
+
+      }
+    );
+
+
+    /* =====================================================
+       LOGIN
+    ===================================================== */
+
+    const loginForm =
+      document.getElementById("loginForm");
+
+
+    loginForm.addEventListener(
+      "submit",
+      (event) => {
+
+        event.preventDefault();
+
+
+        /*
+          Prototype:
+          Giả lập đăng nhập thành công.
+        */
+
+        localStorage.setItem(
+          "insiteLoggedIn",
+          "true"
+        );
+
+
+        /*
+          Sau khi login:
+          → Personal detail
+        */
+
+        window.location.href =
+          "personal.html";
+
+      }
+    );
+
+
+    /* =====================================================
+       FORGOT PASSWORD
+    ===================================================== */
+
+    document
+      .getElementById("forgotPassword")
+      .addEventListener(
+        "click",
+        (event) => {
+
+          event.preventDefault();
+
+          alert(
+            "Tính năng khôi phục mật khẩu sẽ được bổ sung sau."
+          );
+
+        }
+      );
+
+  </script>
+
+</body>
+
+</html>
