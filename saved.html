@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>INSITE — Bản đồ đã lưu</title>
+
+  <!-- Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Navbar CSS -->
+  <link rel="stylesheet" href="navbar.css">
+
+</head>
+
+
+<body>
+
+  <main class="app">
+
+  <section
+    class="screen saved-screen"
+    data-page="saved"
+  >
+
+      <!-- ==================== HEADER ==================== -->
+
+      <header class="page-header">
+
+        <button
+          class="back-button"
+          id="savedBackButton"
+          aria-label="Quay lại"
+        >
+
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.4"
+            aria-hidden="true"
+          >
+            <path d="M15 18l-6-6 6-6"></path>
+          </svg>
+
+        </button>
+
+        <h1>Bản đồ đã lưu</h1>
+
+      </header>
+
+
+      <!-- ==================== SAVED MAPS ==================== -->
+
+     <section
+  class="screen saved-screen"
+  data-page="saved"
+>
+
+        <!-- CARD 01 -->
+
+        <button
+          class="saved-card"
+          data-location="Văn phòng công ty ACA"
+        >
+
+          <div class="saved-card-content">
+
+            <h2>VĂN PHÒNG CÔNG TY ACA</h2>
+
+            <p class="saved-location">
+
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.2"
+                aria-hidden="true"
+              >
+                <path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"></path>
+                <circle cx="12" cy="10" r="2.5"></circle>
+              </svg>
+
+              12 Man Thiện, Q9, TP.Hồ Chí Minh
+
+            </p>
+
+            <p class="saved-floor">
+
+              <span>•</span>
+
+              3 tầng
+
+            </p>
+
+          </div>
+
+
+          <span class="saved-arrow">
+
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              aria-hidden="true"
+            >
+              <path d="M5 12h14"></path>
+              <path d="m13 6 6 6-6 6"></path>
+            </svg>
+
+          </span>
+
+        </button>
+
+
+        <!-- CARD 02 -->
+
+        <button
+          class="saved-card"
+          data-location="Quán cà phê Linh"
+        >
+
+          <div class="saved-card-content">
+
+            <h2>QUÁN CÀ PHÊ LINH</h2>
+
+            <p class="saved-location">
+
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.2"
+                aria-hidden="true"
+              >
+                <path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"></path>
+                <circle cx="12" cy="10" r="2.5"></circle>
+              </svg>
+
+              08, Dân Chủ, Q9, TP.Hồ Chí Minh
+
+            </p>
+
+            <p class="saved-floor">
+
+              <span>•</span>
+
+              Tầng trệt
+
+            </p>
+
+          </div>
+
+
+          <span class="saved-arrow">
+
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              aria-hidden="true"
+            >
+              <path d="M5 12h14"></path>
+              <path d="m13 6 6 6-6 6"></path>
+            </svg>
+
+          </span>
+
+        </button>
+
+
+        <!-- CARD 03 -->
+
+        <button
+          class="saved-card"
+          data-location="Văn phòng công ty AAA"
+        >
+
+          <div class="saved-card-content">
+
+            <h2>VĂN PHÒNG CÔNG TY AAA</h2>
+
+            <p class="saved-location">
+
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.2"
+                aria-hidden="true"
+              >
+                <path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"></path>
+                <circle cx="12" cy="10" r="2.5"></circle>
+              </svg>
+
+              67, Lê Lai, Q1, TP.Hồ Chí Minh
+
+            </p>
+
+            <p class="saved-floor">
+
+              <span>•</span>
+
+              Tầng 8 và 9
+
+            </p>
+
+          </div>
+
+
+          <span class="saved-arrow">
+
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              aria-hidden="true"
+            >
+              <path d="M5 12h14"></path>
+              <path d="m13 6 6 6-6 6"></path>
+            </svg>
+
+          </span>
+
+        </button>
+
+      </section>
+
+
+      <!-- ==================== SHARED NAVBAR ==================== -->
+
+      <div id="navbar"></div>
+
+
+    </section>
+
+  </main>
+
+
+  <!-- Main JavaScript -->
+  <script src="script.js"></script>
+
+</body>
+
+</html>

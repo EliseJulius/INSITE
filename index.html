@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+  />
+
+  <title>INSITE — Home</title>
+
+  <!-- Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Navbar CSS -->
+  <link rel="stylesheet" href="navbar.css" />
+</head>
+
+
+<body>
+
+  <main class="app">
+
+    <!-- ==================== HOME ==================== -->
+
+    <section class="screen" id="homeScreen" data-page="home">
+
+
+      <!-- ==================== SEARCH ==================== -->
+
+      <button
+        class="search-bar"
+        id="searchButton"
+        aria-label="Search"
+      >
+
+        <span class="search-placeholder">
+          Where do you want to go?
+        </span>
+
+        <svg
+          class="search-icon"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          aria-hidden="true"
+        >
+          <circle cx="11" cy="11" r="7"></circle>
+          <path d="M20 20L16 16"></path>
+        </svg>
+
+      </button>
+
+
+      <!-- ==================== CURRENT WORKPLACE ==================== -->
+
+      <section class="section">
+
+        <div class="section-heading">
+
+          <h2>
+            My workplace
+          </h2>
+
+          <button
+            class="text-button"
+            id="viewAllButton"
+          >
+            View all
+          </button>
+
+        </div>
+
+
+        <button
+          class="workplace-card"
+          id="workplaceCard"
+        >
+
+          <!-- Image placeholder -->
+
+          <div class="card-image">
+
+            <span class="image-label">
+              CURRENT WORKPLACE
+            </span>
+
+          </div>
+
+
+          <!-- Card information -->
+
+          <div class="card-content">
+
+            <div>
+
+              <h3>
+                ACA Company Office
+              </h3>
+
+
+              <p class="location">
+
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"
+                  ></path>
+
+                  <circle
+                    cx="12"
+                    cy="10"
+                    r="2.5"
+                  ></circle>
+
+                </svg>
+
+                12 Man Thien, District 9, Ho Chi Minh City
+
+              </p>
+
+
+              <p class="floor">
+
+                <span class="floor-dot"></span>
+
+                3 floors
+
+              </p>
+
+            </div>
+
+
+            <!-- Arrow -->
+
+            <span class="arrow">
+
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                aria-hidden="true"
+              >
+                <path d="M5 12h14"></path>
+                <path d="m13 6 6 6-6 6"></path>
+              </svg>
+
+            </span>
+
+          </div>
+
+        </button>
+
+      </section>
+
+
+      <!-- ==================== RECENT ==================== -->
+
+      <section class="section recent-section">
+
+
+        <div class="section-heading">
+
+          <h2>
+            Recent
+          </h2>
+
+          <button
+            class="text-button"
+            id="recentButton"
+          >
+            View all
+          </button>
+
+        </div>
+
+
+        <div class="recent-list">
+
+
+          <!-- Recent item 01 -->
+
+          <button class="recent-item">
+
+            <div class="recent-icon">
+
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                aria-hidden="true"
+              >
+
+                <path
+                  d="M3 21V9l9-6 9 6v12"
+                ></path>
+
+                <path
+                  d="M7 21v-8h10v8"
+                ></path>
+
+              </svg>
+
+            </div>
+
+
+            <div class="recent-info">
+
+              <strong>
+                Linh Coffee
+              </strong>
+
+              <span>
+                08 Dan Chu, District 9
+              </span>
+
+            </div>
+
+
+            <svg
+              class="small-arrow"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              aria-hidden="true"
+            >
+
+              <path d="M5 12h14"></path>
+
+              <path
+                d="m13 6 6 6-6 6"
+              ></path>
+
+            </svg>
+
+          </button>
+
+
+          <!-- Recent item 02 -->
+
+          <button class="recent-item">
+
+            <div class="recent-icon">
+
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                aria-hidden="true"
+              >
+
+                <path
+                  d="M3 21V9l9-6 9 6v12"
+                ></path>
+
+                <path
+                  d="M7 21v-8h10v8"
+                ></path>
+
+              </svg>
+
+            </div>
+
+
+            <div class="recent-info">
+
+              <strong>
+                AAA Company Office
+              </strong>
+
+              <span>
+                67 Le Lai, District 1
+              </span>
+
+            </div>
+
+
+            <svg
+              class="small-arrow"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              aria-hidden="true"
+            >
+
+              <path d="M5 12h14"></path>
+
+              <path
+                d="m13 6 6 6-6 6"
+              ></path>
+
+            </svg>
+
+          </button>
+
+
+        </div>
+
+      </section>
+
+
+      <!-- ==================== VOICE BUTTON ==================== -->
+
+      <button
+        class="voice-button"
+        id="voiceButton"
+        aria-label="Search by voice"
+      >
+
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          aria-hidden="true"
+        >
+
+          <rect
+            x="9"
+            y="3"
+            width="6"
+            height="12"
+            rx="3"
+          ></rect>
+
+          <path
+            d="M5 11a7 7 0 0 0 14 0"
+          ></path>
+
+          <path
+            d="M12 18v3"
+          ></path>
+
+          <path
+            d="M9 21h6"
+          ></path>
+
+        </svg>
+
+      </button>
+
+
+      <!-- ==================== SHARED NAVBAR ==================== -->
+
+      <div id="navbar"></div>
+
+
+    </section>
+
+  </main>
+
+
+  <!-- Main JavaScript -->
+  <script src="script.js"></script>
+
+</body>
+
+</html>
