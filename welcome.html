@@ -26,85 +26,42 @@
     rel="stylesheet"
   >
 
-  <link rel="stylesheet" href="onboarding.css">
+  <link rel="stylesheet" href="welcome.css">
 
 </head>
 
 
 <body>
 
-  <main class="onboarding-app">
+  <main class="app">
 
     <section class="welcome-screen">
 
 
-      <!-- ==================== TOP ==================== -->
+      <!-- ==================== PROGRESS ==================== -->
 
-      <div class="welcome-top">
+      <div class="welcome-progress">
 
-        <div class="progress-line">
+        <span class="progress-active"></span>
 
-          <span class="progress-active"></span>
-
-          <span class="progress-inactive"></span>
-
-        </div>
+        <span class="progress-inactive"></span>
 
       </div>
+<!-- ==================== BRAND NAME ==================== -->
 
+<div class="welcome-brand">
+  <span>InSite</span>
+</div>
 
-      <!-- ==================== BRAND ==================== -->
+      <!-- ==================== LOGO ==================== -->
 
-      <div class="welcome-brand">
+      <div class="welcome-logo-wrap">
 
         <img
           src="logo.svg"
           alt="INSITE"
           class="welcome-logo"
         >
-
-      </div>
-
-
-      <!-- ==================== VISUAL ==================== -->
-
-      <div class="welcome-visual">
-
-        <div class="visual-circle visual-circle-one"></div>
-
-        <div class="visual-circle visual-circle-two"></div>
-
-        <div class="visual-map">
-
-          <span></span>
-          <span></span>
-          <span></span>
-
-        </div>
-
-        <div class="visual-pin">
-
-          <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            aria-hidden="true"
-          >
-
-            <path
-              d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"
-            ></path>
-
-            <circle
-              cx="12"
-              cy="10"
-              r="2.5"
-            ></circle>
-
-          </svg>
-
-        </div>
 
       </div>
 
@@ -119,8 +76,8 @@
         </h1>
 
         <p>
-          Bản đồ tòa nhà và hệ thống
-          định vị không gian
+          Bản đồ tòa nhà và hệ thống định vị
+          không gian
         </p>
 
       </div>
@@ -131,9 +88,9 @@
       <div class="welcome-bottom">
 
         <button
+          type="button"
           class="welcome-button"
           id="continueButton"
-          type="button"
         >
           Tiếp tục
         </button>
@@ -146,7 +103,7 @@
   </main>
 
 
-  <script src="onboarding.js"></script>
+  <script src="welcome.js"></script>
 
 </body>
 
