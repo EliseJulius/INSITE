@@ -42,36 +42,38 @@
 <div class="search-bar" id="searchBar">
 
   <button
-    class="search-button"
-    id="searchButton"
-    aria-label="Search"
+  class="search-button"
+  id="searchButton"
+  aria-label="Search"
+>
+
+  <!-- Search icon -->
+  <svg
+    class="search-icon"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    aria-hidden="true"
   >
+    <circle
+      cx="11"
+      cy="11"
+      r="7"
+    ></circle>
 
-    <span class="search-placeholder">
-      Where do you want to go?
-    </span>
+    <path
+      d="M20 20L16 16"
+    ></path>
+  </svg>
 
-    <svg
-      class="search-icon"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="2"
-      aria-hidden="true"
-    >
-      <circle
-        cx="11"
-        cy="11"
-        r="7"
-      ></circle>
 
-      <path
-        d="M20 20L16 16"
-      ></path>
+  <!-- Placeholder -->
+  <span class="search-placeholder">
+    Where do you want to go?
+  </span>
 
-    </svg>
-
-  </button>
+</button>
 
 
   <!-- Voice search -->

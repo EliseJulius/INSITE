@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>INSITE — Voice Search</title>
+
+  <!-- Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="navbar.css">
+
+</head>
+
+
+<body>
+
+  <main class="app">
+
+    <section class="screen search-voice-screen">
+
+
+      <!-- ==================== BACK ==================== -->
+
+      <button
+        class="voice-back-button"
+        id="voiceBackButton"
+        type="button"
+        aria-label="Quay lại"
+      >
+
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+
+          <path d="M15 18L9 12L15 6"></path>
+
+        </svg>
+
+      </button>
+
+
+      <!-- ==================== VOICE SEARCH ==================== -->
+
+      <div class="voice-search-content">
+
+        <button
+          class="voice-search-button"
+          id="voiceSearchButton"
+          type="button"
+          aria-label="Bắt đầu tìm kiếm bằng giọng nói"
+        >
+
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+
+            <rect
+              x="9"
+              y="3"
+              width="6"
+              height="12"
+              rx="3"
+            ></rect>
+
+            <path
+              d="M5 11a7 7 0 0 0 14 0"
+            ></path>
+
+            <path
+              d="M12 18v3"
+            ></path>
+
+            <path
+              d="M9 21h6"
+            ></path>
+
+          </svg>
+
+        </button>
+
+
+        <p
+          class="voice-status"
+          id="voiceStatus"
+        >
+          Nhấn để nói
+        </p>
+
+      </div>
+
+
+    </section>
+
+  </main>
+
+
+  <!-- ==================== SCRIPT ==================== -->
+
+  <script>
+
+    const backButton =
+      document.getElementById(
+        "voiceBackButton"
+      );
+
+    const voiceButton =
+      document.getElementById(
+        "voiceSearchButton"
+      );
+
+    const voiceStatus =
+      document.getElementById(
+        "voiceStatus"
+      );
+
+
+    /* =========================
+       BACK
+    ========================= */
+
+    backButton.addEventListener(
+      "click",
+      () => {
+
+        window.location.href =
+          "index.html";
+
+      }
+    );
+
+
+    /* =========================
+       VOICE SEARCH
+    ========================= */
+
+    let recognition = null;
+
+
+    const SpeechRecognition =
+      window.SpeechRecognition ||
+      window.webkitSpeechRecognition;
+
+
+    if (SpeechRecognition) {
+
+      recognition =
+        new SpeechRecognition();
+
+      recognition.lang = "vi-VN";
+
+      recognition.interimResults = false;
+
+      recognition.continuous = false;
+
+
+      recognition.onstart = () => {
+
+        voiceButton.classList.add(
+          "is-listening"
+        );
+
+        voiceStatus.textContent =
+          "Đang lắng nghe...";
+
+      };
+
+
+      recognition.onresult =
+        (event) => {
+
+          const result =
+            event.results[0][0].transcript;
+
+          voiceStatus.textContent =
+            result;
+
+          console.log(
+            "Voice search:",
+            result
+          );
+
+          /*
+            Sau này có thể chuyển tới:
+            search-result.html?q=...
+          */
+
+        };
+
+
+      recognition.onerror =
+        () => {
+
+          voiceButton.classList.remove(
+            "is-listening"
+          );
+
+          voiceStatus.textContent =
+            "Không nhận diện được. Thử lại.";
+
+        };
+
+
+      recognition.onend = () => {
+
+        voiceButton.classList.remove(
+          "is-listening"
+        );
+
+      };
+
+
+      voiceButton.addEventListener(
+        "click",
+        () => {
+
+          recognition.start();
+
+        }
+      );
+
+    } else {
+
+      /*
+        Browser không hỗ trợ
+        Speech Recognition
+      */
+
+      voiceButton.addEventListener(
+        "click",
+        () => {
+
+          voiceStatus.textContent =
+            "Trình duyệt không hỗ trợ tìm kiếm bằng giọng nói.";
+
+        }
+      );
+
+    }
+
+  </script>
+
+</body>
+
+</html>

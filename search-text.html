@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>INSITE — Search</title>
+
+  <!-- Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="navbar.css">
+
+</head>
+
+
+<body>
+
+  <main class="app">
+
+    <section class="screen search-text-screen">
+
+      <!-- ==================== SEARCH HEADER ==================== -->
+
+      <header class="search-text-header">
+
+        <div class="search-input-wrapper">
+
+          <!-- Search icon -->
+
+          <svg
+            class="search-input-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            aria-hidden="true"
+          >
+
+            <circle
+              cx="11"
+              cy="11"
+              r="7"
+            ></circle>
+
+            <path
+              d="M20 20L16 16"
+            ></path>
+
+          </svg>
+
+
+          <!-- Input -->
+
+          <input
+            type="text"
+            id="searchInput"
+            class="search-input"
+            placeholder=""
+            autocomplete="off"
+            autofocus
+            aria-label="Tìm kiếm"
+          >
+
+
+        </div>
+
+
+        <!-- Cancel -->
+
+        <button
+          class="search-cancel"
+          id="searchCancel"
+          type="button"
+        >
+          Cancel
+        </button>
+
+      </header>
+
+
+      <!-- ==================== RECENT SEARCH ==================== -->
+
+      <section class="recent-search-section">
+
+        <h1>
+          Tìm kiếm gần đây
+        </h1>
+
+
+        <div class="search-history">
+
+
+          <!-- ITEM 1 -->
+
+          <button
+            class="search-history-item"
+            type="button"
+            data-search="Văn phòng công ty ACA"
+          >
+
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              aria-hidden="true"
+            >
+
+              <circle
+                cx="11"
+                cy="11"
+                r="7"
+              ></circle>
+
+              <path
+                d="M20 20L16 16"
+              ></path>
+
+            </svg>
+
+            <span>
+              Văn phòng công ty ACA
+            </span>
+
+            <span class="history-remove">
+              ×
+            </span>
+
+          </button>
+
+
+          <!-- ITEM 2 -->
+
+          <button
+            class="search-history-item"
+            type="button"
+            data-search="Cà phê gần đây"
+          >
+
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              aria-hidden="true"
+            >
+
+              <circle
+                cx="11"
+                cy="11"
+                r="7"
+              ></circle>
+
+              <path
+                d="M20 20L16 16"
+              ></path>
+
+            </svg>
+
+            <span>
+              Cà phê gần đây
+            </span>
+
+            <span class="history-remove">
+              ×
+            </span>
+
+          </button>
+
+
+          <!-- ITEM 3 -->
+
+          <button
+            class="search-history-item"
+            type="button"
+            data-search="Văn phòng công ty AAA"
+          >
+
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              aria-hidden="true"
+            >
+
+              <circle
+                cx="11"
+                cy="11"
+                r="7"
+              ></circle>
+
+              <path
+                d="M20 20L16 16"
+              ></path>
+
+            </svg>
+
+            <span>
+              Văn phòng công ty AAA
+            </span>
+
+            <span class="history-remove">
+              ×
+            </span>
+
+          </button>
+
+
+        </div>
+
+      </section>
+
+    </section>
+
+  </main>
+
+
+  <!-- ==================== SCRIPT ==================== -->
+
+  <script>
+
+    const searchInput =
+      document.getElementById("searchInput");
+
+    const searchCancel =
+      document.getElementById("searchCancel");
+
+    const historyItems =
+      document.querySelectorAll(".search-history-item");
+
+
+    /* =========================
+       CANCEL
+    ========================= */
+
+    searchCancel.addEventListener("click", () => {
+
+      window.location.href = "index.html";
+
+    });
+
+
+    /* =========================
+       HISTORY ITEM
+    ========================= */
+
+    historyItems.forEach((item) => {
+
+      item.addEventListener("click", () => {
+
+        const value =
+          item.dataset.search;
+
+        searchInput.value = value;
+
+        searchInput.focus();
+
+      });
+
+    });
+
+
+    /* =========================
+       ENTER SEARCH
+    ========================= */
+
+    searchInput.addEventListener(
+      "keydown",
+      (event) => {
+
+        if (event.key === "Enter") {
+
+          const query =
+            searchInput.value.trim();
+
+          if (!query) return;
+
+          console.log(
+            "Search:",
+            query
+          );
+
+          /*
+            Sau này có thể chuyển tới:
+            search-result.html?q=...
+          */
+
+        }
+
+      }
+    );
+
+  </script>
+
+</body>
+
+</html>

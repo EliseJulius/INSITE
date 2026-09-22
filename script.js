@@ -237,3 +237,42 @@ document.addEventListener(
   "DOMContentLoaded",
   initApp
 );
+
+
+  /* =====================================================
+     SEARCH NAVIGATION
+  ===================================================== */
+
+  const searchButton =
+    document.getElementById("searchButton");
+
+  const voiceButton =
+    document.getElementById("voiceButton");
+
+
+  /* ==================== TEXT SEARCH ==================== */
+
+  if (searchButton) {
+
+    searchButton.addEventListener("click", () => {
+
+      window.location.href = "search-text.html";
+
+    });
+
+  }
+
+
+  /* ==================== VOICE SEARCH ==================== */
+
+  if (voiceButton) {
+
+    voiceButton.addEventListener("click", (event) => {
+
+      event.stopPropagation();
+
+      window.location.href = "search-voice.html";
+
+    });
+
+  }

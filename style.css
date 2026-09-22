@@ -565,7 +565,7 @@ button:focus-visible {
 
   transition:
     transform 0.15s ease,
-    background 0.15s ease;
+    background  0.15s ease;
 }
 
 .saved-card:hover {
@@ -672,17 +672,6 @@ button:focus-visible {
 .saved-arrow svg {
   width: 25px;
   height: 25px;
-}
-
-
-/* =====================================================
-   SAVED MAPS
-   ===================================================== */
-
-.saved-screen {
-  min-height: 852px;
-
-  padding-bottom: 100px;
 }
 
 
@@ -899,11 +888,12 @@ button:focus-visible {
 
 .search-button {
   flex: 1;
-
   height: 100%;
 
   display: flex;
   align-items: center;
+
+  gap: 10px;
 
   padding: 0 16px;
 
@@ -913,36 +903,25 @@ button:focus-visible {
   color: var(--secondary-text);
 
   text-align: left;
-
   cursor: pointer;
 }
-
-
-/* ========================================
-   SEARCH PLACEHOLDER
-======================================== */
-
-.search-placeholder {
-  flex: 1;
-
-  font-family: inherit;
-  font-size: 14px;
-  font-weight: 500;
-
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-
-/* ========================================
-   SEARCH ICON
-======================================== */
 
 .search-icon {
   width: 22px;
   height: 22px;
 
   flex-shrink: 0;
+}
+
+.search-placeholder {
+  font-size: 14px;
+  font-weight: 500;
+
+  color: #59595C;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 
@@ -976,4 +955,713 @@ button:focus-visible {
 .search-voice-button svg {
   width: 22px;
   height: 22px;
+}
+
+/* =====================================================
+   PROFILE PAGE
+===================================================== */
+
+.profile-screen {
+  min-height: 852px;
+  padding-bottom: 72px;
+}
+
+
+/* =====================================================
+   PROFILE HEADER
+===================================================== */
+
+.profile-header {
+  padding: 48px 24px 42px;
+}
+
+.profile-header .back-button {
+  width: 32px;
+  height: 40px;
+}
+
+.profile-header .back-button svg {
+  width: 30px;
+  height: 30px;
+}
+
+.profile-header h1 {
+  font-size: 27px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+
+/* =====================================================
+   PROFILE CONTENT
+===================================================== */
+
+.profile-content {
+  padding: 0 22px;
+}
+
+
+/* =====================================================
+   ACCOUNT CARD
+===================================================== */
+
+.profile-account-card {
+  width: 100%;
+  min-height: 78px;
+  padding: 12px 18px;
+
+  display: flex;
+  align-items: center;
+
+  background: #DCDCDC;
+  border-radius: 30px;
+
+  color: var(--text);
+  text-align: left;
+
+  transition:
+    transform 0.15s ease,
+    background 0.15s ease;
+}
+
+.profile-account-card:hover {
+  background: #D5D5D5;
+}
+
+.profile-account-card:active {
+  transform: scale(0.985);
+}
+
+
+/* Avatar */
+
+.profile-avatar {
+  width: 48px;
+  height: 48px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #292729;
+  color: #A7A4A7;
+}
+
+.profile-avatar svg {
+  width: 34px;
+  height: 34px;
+}
+
+
+/* Account information */
+
+.profile-account-info {
+  min-width: 0;
+
+  margin-left: 16px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+.profile-account-info strong {
+  font-size: 18px;
+  line-height: 1.25;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.profile-account-info span {
+  font-size: 14px;
+  line-height: 1.3;
+  font-weight: 500;
+  color: var(--text);
+}
+
+
+/* =====================================================
+   PROFILE MENU
+===================================================== */
+
+.profile-menu {
+  width: 100%;
+  margin-top: 18px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* =====================================================
+   MENU ITEM
+===================================================== */
+
+.profile-menu-item {
+  width: 100%;
+  min-height: 54px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 6px 4px;
+
+  background: transparent;
+  color: var(--text);
+
+  text-align: left;
+  text-decoration: none;
+
+  transition:
+    background 0.15s ease,
+    transform 0.15s ease;
+
+  -webkit-tap-highlight-color: transparent;
+}
+
+.profile-menu-item:hover {
+  background: #F7F7F7;
+  border-radius: 12px;
+}
+
+.profile-menu-item:active {
+  transform: scale(0.985);
+}
+
+
+/* =====================================================
+   MENU ICON
+===================================================== */
+
+.profile-menu-icon {
+  width: 40px;
+  height: 40px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #99999F;
+}
+
+.profile-menu-icon svg {
+  width: 25px;
+  height: 25px;
+}
+
+
+/* =====================================================
+   MENU LABEL
+===================================================== */
+
+.profile-menu-label {
+  flex: 1;
+
+  margin-left: 12px;
+
+  font-size: 18px;
+  line-height: 1.3;
+  font-weight: 500;
+
+  color: var(--text);
+}
+
+
+/* =====================================================
+   MENU CHEVRON
+===================================================== */
+
+.profile-menu-chevron {
+  width: 22px;
+  height: 22px;
+
+  flex-shrink: 0;
+
+  margin-right: 4px;
+
+  color: #77777D;
+}
+
+
+/* =====================================================
+   MOBILE / SMALL HEIGHT
+===================================================== */
+
+@media (max-height: 750px) {
+
+  .profile-header {
+    padding-top: 28px;
+    padding-bottom: 28px;
+  }
+
+  .profile-account-card {
+    min-height: 72px;
+  }
+
+  .profile-menu-item {
+    min-height: 50px;
+  }
+
+  .profile-menu-label {
+    font-size: 17px;
+  }
+
+}
+
+
+/* =====================================================
+   DESKTOP PREVIEW
+===================================================== */
+
+@media (min-width: 600px) {
+
+  .profile-screen {
+    min-height: 852px;
+    margin: 30px 0;
+    border-radius: 12px;
+
+    box-shadow:
+      0 20px 60px rgba(0, 0, 0, 0.2);
+  }
+
+}/* =====================================================
+   SEARCH — TEXT SEARCH
+===================================================== */
+
+.search-text-screen {
+  min-height: 852px;
+  background: var(--white);
+}
+
+
+/* =====================================================
+   SEARCH TEXT HEADER
+===================================================== */
+
+.search-text-header {
+  width: 100%;
+  min-height: 110px;
+
+  padding: 50px 8px 30px 22px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 4px;
+
+  background: var(--white);
+}
+
+
+/* =====================================================
+   SEARCH INPUT
+===================================================== */
+
+.search-input-wrapper {
+  flex: 1;
+
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 10px;
+
+  background: #D7D7D7;
+
+  border-radius: 18px;
+}
+
+
+/* Search icon */
+
+.search-input-icon {
+  width: 17px;
+  height: 17px;
+
+  flex-shrink: 0;
+
+  color: #66666A;
+}
+
+
+/* Input */
+
+.search-input {
+  flex: 1;
+
+  min-width: 0;
+
+  height: 100%;
+
+  margin-left: 5px;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+
+  color: var(--text);
+}
+
+
+/*
+  Yellow cursor / accent
+*/
+
+.search-input:focus {
+  caret-color: var(--yellow);
+}
+
+
+.search-input::placeholder {
+  color: #77777D;
+}
+
+
+/* =====================================================
+   CANCEL
+===================================================== */
+
+.search-cancel {
+  width: 40px;
+
+  padding: 0;
+
+  background: transparent;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  color: #111111;
+
+  text-align: center;
+}
+
+
+/* =====================================================
+   RECENT SEARCH
+===================================================== */
+
+.recent-search-section {
+
+  padding: 20px 24px 0;
+
+  border-top: 1px solid #EEEEEE;
+
+  box-shadow:
+    0 -2px 8px rgba(0, 0, 0, 0.04);
+}
+
+
+.recent-search-section h1 {
+
+  margin-bottom: 16px;
+
+  font-size: 22px;
+  line-height: 1.25;
+
+  font-weight: 700;
+
+  color: #111111;
+}
+
+
+/* =====================================================
+   SEARCH HISTORY
+===================================================== */
+
+.search-history {
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+
+/* History item */
+
+.search-history-item {
+
+  width: 100%;
+  min-height: 36px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 4px 2px;
+
+  background: transparent;
+
+  color: var(--text);
+
+  text-align: left;
+
+  border-radius: 8px;
+}
+
+
+.search-history-item:hover {
+  background: #F7F7F7;
+}
+
+
+/* Search icon */
+
+.search-history-item > svg {
+
+  width: 18px;
+  height: 18px;
+
+  flex-shrink: 0;
+
+  color: #66666A;
+}
+
+
+/* Text */
+
+.search-history-item > span:not(.history-remove) {
+
+  flex: 1;
+
+  margin-left: 16px;
+
+  font-size: 14px;
+  line-height: 1.3;
+
+  font-weight: 500;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+/* Remove */
+
+.history-remove {
+
+  width: 22px;
+
+  margin-left: 8px;
+
+  font-size: 20px;
+  line-height: 1;
+
+  font-weight: 400;
+
+  color: #66666A;
+
+  text-align: center;
+}
+
+
+/* =====================================================
+   SEARCH — VOICE
+===================================================== */
+
+.search-voice-screen {
+
+  min-height: 852px;
+
+  background: var(--white);
+
+  position: relative;
+}
+
+
+/* =====================================================
+   VOICE BACK
+===================================================== */
+
+.voice-back-button {
+
+  position: absolute;
+
+  top: 50px;
+  left: 18px;
+
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: transparent;
+
+  color: #111111;
+
+  z-index: 2;
+}
+
+
+.voice-back-button svg {
+
+  width: 32px;
+  height: 32px;
+
+}
+
+
+/* =====================================================
+   VOICE CONTENT
+===================================================== */
+
+.voice-search-content {
+
+  position: absolute;
+
+  top: 50%;
+
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+}
+
+
+/* =====================================================
+   VOICE BUTTON
+===================================================== */
+
+.voice-search-button {
+
+  width: 156px;
+  height: 156px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: var(--blue);
+
+  color: var(--yellow);
+
+  border: 7px solid var(--yellow);
+
+  box-shadow:
+    0 0 0 2px var(--blue);
+
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.voice-search-button svg {
+
+  width: 65px;
+  height: 65px;
+
+}
+
+
+.voice-search-button:hover {
+
+  transform: scale(1.03);
+
+}
+
+
+.voice-search-button:active {
+
+  transform: scale(0.96);
+
+}
+
+
+/* =====================================================
+   VOICE LISTENING STATE
+===================================================== */
+
+.voice-search-button.is-listening {
+
+  animation: voicePulse 1.2s infinite;
+
+}
+
+
+@keyframes voicePulse {
+
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.06);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+
+}
+
+
+/* =====================================================
+   VOICE STATUS
+===================================================== */
+
+.voice-status {
+
+  margin-top: 20px;
+
+  max-width: 260px;
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+  line-height: 1.4;
+
+  color: var(--secondary-text);
+
+  text-align: center;
+}
+
+
+/* =====================================================
+   DESKTOP PREVIEW
+===================================================== */
+
+@media (min-width: 600px) {
+
+  .search-text-screen,
+  .search-voice-screen {
+
+    min-height: 852px;
+
+    margin: 30px 0;
+
+    border-radius: 12px;
+
+    box-shadow:
+      0 20px 60px rgba(0, 0, 0, 0.2);
+
+  }
+
 }
