@@ -675,24 +675,305 @@ button:focus-visible {
 }
 
 
-/* ==================== SAVED NAV ==================== */
+/* =====================================================
+   SAVED MAPS
+   ===================================================== */
 
-.saved-screen .bottom-nav {
-  height: 76px;
+.saved-screen {
+  min-height: 852px;
 
-  padding-left: 36px;
-  padding-right: 36px;
+  padding-bottom: 100px;
 }
 
-.saved-screen .nav-item {
-  width: 48px;
+
+/* ==================== HEADER ==================== */
+
+.page-header {
+  display: flex;
+  align-items: center;
+
+  gap: 16px;
+
+  padding: 48px 24px 36px;
 }
 
-.saved-screen .nav-item svg {
-  width: 27px;
-  height: 27px;
+.back-button {
+  width: 32px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: transparent;
+
+  color: #111111;
+
+  flex-shrink: 0;
 }
 
-.saved-screen .nav-item.active {
+.back-button svg {
+  width: 30px;
+  height: 30px;
+}
+
+.page-header h1 {
+  font-size: 27px;
+  line-height: 1.2;
+
+  font-weight: 700;
+
+  color: var(--text);
+}
+
+
+/* ==================== SAVED LIST ==================== */
+
+.saved-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 16px;
+
+  padding: 0 22px;
+}
+
+
+/* ==================== SAVED CARD ==================== */
+
+.saved-card {
+  position: relative;
+
+  width: 100%;
+  min-height: 120px;
+
+  padding: 13px 12px;
+
+  display: flex;
+  align-items: center;
+
+  text-align: left;
+
+  background: var(--placeholder);
+
+  border-radius: 15px;
+
+  color: var(--text);
+
+  transition:
+    transform 0.15s ease,
+    background 0.15s ease;
+}
+
+.saved-card:hover {
+  background: #E2E2E2;
+}
+
+.saved-card:active {
+  transform: scale(0.985);
+}
+
+
+/* ==================== CARD CONTENT ==================== */
+
+.saved-card-content {
+  min-width: 0;
+
+  padding-right: 38px;
+}
+
+.saved-card h2 {
+  margin-bottom: 8px;
+
+  font-size: 18px;
+  line-height: 1.25;
+
+  font-weight: 700;
+
+  color: var(--text);
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+/* ==================== LOCATION ==================== */
+
+.saved-location {
+  display: flex;
+  align-items: center;
+
+  gap: 5px;
+
+  margin-bottom: 4px;
+
+  font-size: 13px;
+  line-height: 1.35;
+
+  font-weight: 500;
+
+  color: #151515;
+
+  white-space: nowrap;
+}
+
+.saved-location svg {
+  width: 15px;
+  height: 15px;
+
+  flex-shrink: 0;
+}
+
+
+/* ==================== FLOOR ==================== */
+
+.saved-floor {
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+
+  font-size: 13px;
+  line-height: 1.35;
+
+  font-weight: 500;
+
+  color: #151515;
+}
+
+.saved-floor span {
+  font-size: 16px;
+  line-height: 1;
+}
+
+
+/* ==================== CARD ARROW ==================== */
+
+.saved-arrow {
+  position: absolute;
+
+  right: 14px;
+  bottom: 13px;
+
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #111111;
+}
+
+.saved-arrow svg {
+  width: 25px;
+  height: 25px;
+}
+
+/* ========================================
+   SEARCH BAR
+======================================== */
+
+.search-bar {
+  width: calc(100% - 32px);
+  height: 56px;
+
+  margin: 16px;
+
+  display: flex;
+  align-items: center;
+
+  background: #F5F5F5;
+
+  border: none;
+  border-radius: 28px;
+
+  overflow: hidden;
+}
+
+
+/* ========================================
+   SEARCH BUTTON
+======================================== */
+
+.search-button {
+  flex: 1;
+
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 16px;
+
+  background: transparent;
+  border: none;
+
+  color: var(--secondary-text);
+
+  text-align: left;
+
+  cursor: pointer;
+}
+
+
+/* ========================================
+   SEARCH PLACEHOLDER
+======================================== */
+
+.search-placeholder {
+  flex: 1;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+
+/* ========================================
+   SEARCH ICON
+======================================== */
+
+.search-icon {
+  width: 22px;
+  height: 22px;
+
+  flex-shrink: 0;
+}
+
+
+/* ========================================
+   VOICE SEARCH
+======================================== */
+
+.search-voice-button {
+  width: 52px;
+  height: 52px;
+
+  margin-right: 2px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: transparent;
+
+  border: none;
+
   color: var(--blue);
+
+  cursor: pointer;
+
+  flex-shrink: 0;
+
+  -webkit-tap-highlight-color: transparent;
+}
+
+.search-voice-button svg {
+  width: 22px;
+  height: 22px;
 }
