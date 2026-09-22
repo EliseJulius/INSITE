@@ -1,0 +1,450 @@
+/* =====================================================
+   INSITE — ONBOARDING
+===================================================== */
+
+:root {
+
+  --blue: #0878E5;
+  --blue-dark: #0069D4;
+
+  --mint: #C9F4D4;
+
+  --white: #FFFFFF;
+  --text: #2F2F34;
+
+}
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+html {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background: #333033;
+}
+
+
+body {
+  min-height: 100vh;
+  background: #333033;
+}
+
+
+/* =====================================================
+   APP
+===================================================== */
+
+.onboarding-app {
+
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+}
+
+
+.welcome-screen {
+
+  position: relative;
+
+  width: 100%;
+  max-width: 393px;
+
+  min-height: 100vh;
+
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+
+  color: var(--white);
+
+  background:
+    linear-gradient(
+      145deg,
+      #AFC8DD 0%,
+      #BBD7D0 32%,
+      #CFF1C7 52%,
+      #80D9E1 73%,
+      #0878E5 100%
+    );
+}
+
+
+/* =====================================================
+   TOP PROGRESS
+===================================================== */
+
+.welcome-top {
+
+  padding:
+    38px
+    24px
+    0;
+
+}
+
+
+.progress-line {
+
+  width: 100%;
+
+  display: flex;
+  gap: 8px;
+
+}
+
+
+.progress-line span {
+
+  height: 3px;
+
+  flex: 1;
+
+  border-radius: 999px;
+
+}
+
+
+.progress-active {
+  background: rgba(255, 255, 255, 0.95);
+}
+
+
+.progress-inactive {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.welcome-brand {
+
+  padding:
+    25px
+    24px
+    0;
+
+}
+
+
+.welcome-logo {
+
+  display: block;
+
+  width: 115px;
+  height: auto;
+
+  object-fit: contain;
+
+}
+
+
+/* =====================================================
+   VISUAL
+===================================================== */
+
+.welcome-visual {
+
+  position: relative;
+
+  height: 290px;
+
+  margin-top: 25px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+/* Decorative circles */
+
+.visual-circle {
+
+  position: absolute;
+
+  border-radius: 50%;
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.35);
+
+}
+
+
+.visual-circle-one {
+
+  width: 210px;
+  height: 210px;
+
+}
+
+
+.visual-circle-two {
+
+  width: 155px;
+  height: 155px;
+
+}
+
+
+/* Map */
+
+.visual-map {
+
+  position: relative;
+
+  width: 205px;
+  height: 155px;
+
+  border-radius: 30px;
+
+  background:
+    rgba(255, 255, 255, 0.18);
+
+  border:
+    1px solid rgba(255, 255, 255, 0.5);
+
+  transform: rotate(-8deg);
+
+  backdrop-filter: blur(3px);
+
+}
+
+
+/* Map lines */
+
+.visual-map span {
+
+  position: absolute;
+
+  display: block;
+
+  background:
+    rgba(255, 255, 255, 0.8);
+
+  border-radius: 10px;
+
+}
+
+
+.visual-map span:nth-child(1) {
+
+  width: 115px;
+  height: 5px;
+
+  left: 30px;
+  top: 40px;
+
+  transform: rotate(25deg);
+
+}
+
+
+.visual-map span:nth-child(2) {
+
+  width: 90px;
+  height: 5px;
+
+  left: 65px;
+  top: 85px;
+
+  transform: rotate(-35deg);
+
+}
+
+
+.visual-map span:nth-child(3) {
+
+  width: 65px;
+  height: 5px;
+
+  left: 20px;
+  top: 105px;
+
+  transform: rotate(10deg);
+
+}
+
+
+/* Location pin */
+
+.visual-pin {
+
+  position: absolute;
+
+  width: 64px;
+  height: 64px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: var(--white);
+
+  color: var(--blue);
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.12);
+
+  transform:
+    translate(62px, -48px);
+
+}
+
+
+.visual-pin svg {
+
+  width: 31px;
+  height: 31px;
+
+}
+
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.welcome-content {
+
+  padding:
+    0 25px;
+
+  margin-top: auto;
+
+}
+
+
+.welcome-content h1 {
+
+  font-size: 36px;
+
+  line-height: 1.18;
+
+  font-weight: 500;
+
+  letter-spacing: -1.2px;
+
+}
+
+
+.welcome-content p {
+
+  max-width: 290px;
+
+  margin-top: 16px;
+
+  font-size: 16px;
+
+  line-height: 1.5;
+
+  font-weight: 400;
+
+  color:
+    rgba(255, 255, 255, 0.92);
+
+}
+
+
+/* =====================================================
+   BOTTOM CTA
+===================================================== */
+
+.welcome-bottom {
+
+  padding:
+    24px
+    24px
+    50px;
+
+}
+
+
+.welcome-button {
+
+  width: 100%;
+  height: 66px;
+
+  border: none;
+  border-radius: 34px;
+
+  background: var(--white);
+
+  color: #16243A;
+
+  font-family: inherit;
+
+  font-size: 17px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+
+}
+
+
+.welcome-button:hover {
+
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.12);
+
+}
+
+
+.welcome-button:active {
+
+  transform: scale(0.97);
+
+}
+
+
+.welcome-button:focus-visible {
+
+  outline:
+    3px solid rgba(255, 255, 255, 0.8);
+
+  outline-offset: 3px;
+
+}
+
+
+/* =====================================================
+   DESKTOP PREVIEW
+===================================================== */
+
+@media (min-width: 600px) {
+
+  .welcome-screen {
+
+    min-height: 852px;
+
+    margin: 30px 0;
+
+    border-radius: 12px;
+
+    box-shadow:
+      0 20px 60px rgba(0, 0, 0, 0.2);
+
+  }
+
+}
