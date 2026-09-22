@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>INSITE — Chỉnh sửa bản đồ</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+  <main class="app">
+
+    <section class="screen map-editor-screen">
+
+
+      <!-- ==================== HEADER ==================== -->
+
+      <header class="page-header editor-header">
+
+        <button
+          class="back-button"
+          id="editorBackButton"
+          type="button"
+          aria-label="Quay lại"
+        >
+
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+
+            <path d="M15 18L9 12L15 6"></path>
+
+          </svg>
+
+        </button>
+
+
+        <h1>
+          Bản đồ chi tiết
+        </h1>
+
+      </header>
+
+
+
+      <!-- ==================== MAP ==================== -->
+
+      <section class="map-editor-area">
+
+        <div
+          class="map-canvas"
+          id="mapCanvas"
+        >
+
+          <!--
+            Objects will appear here
+            when user adds them.
+          -->
+
+        </div>
+
+      </section>
+
+
+
+      <!-- ==================== TOOLBAR ==================== -->
+
+      <section class="map-toolbar">
+
+        <div
+          class="tool-list"
+          id="toolList"
+        >
+
+
+          <!-- ADD -->
+
+          <button
+            class="map-tool add-tool"
+            data-type="add"
+            type="button"
+          >
+
+            <span class="tool-icon add-tool-icon">
+
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              >
+
+                <path d="M12 5V19"></path>
+
+                <path d="M5 12H19"></path>
+
+              </svg>
+
+            </span>
+
+            <span>
+              Thêm
+            </span>
+
+          </button>
+
+
+
+          <!-- TABLE -->
+
+          <button
+            class="map-tool"
+            data-type="table"
+            type="button"
+          >
+
+            <span class="tool-object table-object"></span>
+
+            <span>
+              Bàn
+            </span>
+
+          </button>
+
+
+
+          <!-- CHAIR -->
+
+          <button
+            class="map-tool"
+            data-type="chair"
+            type="button"
+          >
+
+            <span class="tool-object chair-object"></span>
+
+            <span>
+              Ghế
+            </span>
+
+          </button>
+
+
+
+          <!-- MEETING TABLE -->
+
+          <button
+            class="map-tool"
+            data-type="meeting"
+            type="button"
+          >
+
+            <span class="tool-object meeting-object"></span>
+
+            <span>
+              Thang máy
+            </span>
+
+          </button>
+
+
+
+          <!-- DOOR -->
+
+          <button
+            class="map-tool"
+            data-type="door"
+            type="button"
+          >
+
+            <span class="tool-object door-object"></span>
+
+            <span>
+              Cửa
+            </span>
+
+          </button>
+
+
+
+          <!-- WALL -->
+
+          <button
+            class="map-tool"
+            data-type="wall"
+            type="button"
+          >
+
+            <span class="tool-object wall-object"></span>
+
+            <span>
+              Tường
+            </span>
+
+          </button>
+
+        </div>
+
+
+
+        <!-- ==================== SUBMIT ==================== -->
+
+        <button
+          class="submit-map-button"
+          id="submitMapButton"
+          type="button"
+        >
+          Gửi chờ duyệt
+        </button>
+
+      </section>
+
+
+    </section>
+
+  </main>
+
+
+  <script src="map-editor.js"></script>
+
+</body>
+
+</html>

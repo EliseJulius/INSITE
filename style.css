@@ -1665,3 +1665,1173 @@ button:focus-visible {
   }
 
 }
+/* =====================================================
+   MAP MANAGEMENT
+===================================================== */
+
+.map-management-screen {
+  min-height: 852px;
+  position: relative;
+  background: var(--white);
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.map-page-header {
+  padding:
+    48px 20px 32px 18px;
+
+  gap: 14px;
+}
+
+
+.map-page-header h1,
+.map-form-header h1 {
+
+  font-size: 27px;
+
+  line-height: 1.2;
+
+  font-weight: 700;
+
+  color: var(--text);
+
+  white-space: nowrap;
+}
+
+
+/* =====================================================
+   MAP OPTIONS
+===================================================== */
+
+.map-options {
+
+  padding: 0 24px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 30px;
+
+}
+
+
+/* =====================================================
+   OPTION CARD
+===================================================== */
+
+.map-option-card {
+
+  width: 100%;
+
+  min-height: 125px;
+
+  padding: 12px 20px 16px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  background: #D8D8D8;
+
+  border-radius: 18px;
+
+  color: var(--text);
+
+  transition:
+    transform 0.15s ease,
+    background 0.15s ease;
+}
+
+
+.map-option-card:hover {
+
+  background: #D2D2D2;
+
+}
+
+
+.map-option-card:active {
+
+  transform: scale(0.98);
+
+}
+
+
+/* =====================================================
+   OPTION ICON
+===================================================== */
+
+.map-option-icon {
+
+  width: 44px;
+
+  height: 44px;
+
+  margin-bottom: 7px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 50%;
+
+  color: var(--white);
+
+  background: #111111;
+}
+
+
+.map-option-icon svg {
+
+  width: 29px;
+
+  height: 29px;
+
+}
+
+
+/* Edit icon doesn't need circle */
+
+.edit-map-icon {
+
+  width: 44px;
+
+  height: 44px;
+
+  background: transparent;
+
+  color: #111111;
+
+}
+
+
+.edit-map-icon svg {
+
+  width: 31px;
+
+  height: 31px;
+
+}
+
+
+/* =====================================================
+   OPTION TEXT
+===================================================== */
+
+.map-option-card strong {
+
+  display: block;
+
+  margin-bottom: 2px;
+
+  font-size: 17px;
+
+  line-height: 1.3;
+
+  font-weight: 700;
+
+}
+
+
+.map-option-card > span:last-child {
+
+  max-width: 270px;
+
+  font-size: 12px;
+
+  line-height: 1.45;
+
+  font-weight: 400;
+
+  color: #333333;
+
+}
+
+
+/* =====================================================
+   BOTTOM ACTION
+===================================================== */
+
+.map-bottom-action {
+
+  position: absolute;
+
+  left: 20px;
+
+  right: 20px;
+
+  bottom: 29px;
+
+}
+
+
+/* =====================================================
+   PRIMARY BUTTON
+===================================================== */
+
+.primary-button {
+
+  width: 100%;
+
+  height: 63px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 0 20px;
+
+  border-radius: 31px;
+
+  background: var(--blue);
+
+  color: var(--white);
+
+  font-family: inherit;
+
+  font-size: 18px;
+
+  font-weight: 700;
+
+  text-align: center;
+
+  transition:
+    transform 0.15s ease,
+    filter 0.15s ease;
+}
+
+
+.primary-button:hover {
+
+  filter: brightness(0.96);
+
+}
+
+
+.primary-button:active {
+
+  transform: scale(0.98);
+
+}
+
+
+/* =====================================================
+   MAP FORM
+===================================================== */
+
+.map-form-screen {
+
+  min-height: 852px;
+
+  position: relative;
+
+  background: var(--white);
+}
+
+
+.map-form-header {
+
+  padding:
+    48px 20px 30px 18px;
+
+  gap: 14px;
+}
+
+
+/* =====================================================
+   FORM CONTENT
+===================================================== */
+
+.map-form {
+
+  padding: 0 24px;
+
+}
+
+
+.form-field {
+
+  margin-bottom: 19px;
+
+}
+
+
+.form-field label {
+
+  display: block;
+
+  margin-bottom: 9px;
+
+  font-size: 17px;
+
+  line-height: 1.25;
+
+  font-weight: 600;
+
+  color: #222222;
+
+}
+
+
+.form-field input {
+  width: 100%;
+  height: 41px;
+  padding: 0 13px;
+
+  border: 1px solid #E8E8E8;
+  border-radius: 9px;
+
+  outline: none;
+
+  background: #FFFFFF;
+  color: var(--text);
+
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 400;
+
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.03);
+
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.form-field input:focus {
+  border-color: var(--blue);
+
+  box-shadow:
+    0 0 0 3px rgba(0, 119, 230, 0.10);
+}
+
+
+/* =====================================================
+   FORM HINT
+===================================================== */
+
+.form-hint {
+
+  margin-top: 8px;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 8px;
+
+  color: var(--secondary-text);
+
+}
+
+
+.form-hint svg {
+
+  width: 17px;
+
+  height: 17px;
+
+  flex-shrink: 0;
+
+  margin-top: 1px;
+
+}
+
+
+.form-hint span {
+
+  font-size: 11px;
+
+  line-height: 1.45;
+
+}
+
+
+/* =====================================================
+   FORM BOTTOM
+===================================================== */
+
+.map-form-bottom {
+
+  position: absolute;
+
+  left: 20px;
+
+  right: 20px;
+
+  bottom: 29px;
+
+}
+
+
+/* =====================================================
+   DESKTOP PREVIEW
+===================================================== */
+
+@media (min-width: 600px) {
+
+  .map-management-screen,
+  .map-form-screen {
+
+    min-height: 852px;
+
+    margin: 30px 0;
+
+    border-radius: 12px;
+
+    box-shadow:
+      0 20px 60px rgba(0, 0, 0, 0.2);
+
+  }
+
+}
+/* =====================================================
+   MAP DETAIL
+===================================================== */
+
+.map-detail-screen {
+
+  min-height: 852px;
+
+  position: relative;
+
+  background: var(--white);
+
+}
+
+
+.map-detail-header {
+
+  padding:
+    48px 18px 32px;
+
+  gap: 14px;
+
+}
+
+
+.map-detail-header h1 {
+
+  font-size: 25px;
+
+  line-height: 1.2;
+
+  font-weight: 700;
+
+}
+
+
+
+/* =====================================================
+   FLOOR CARD
+===================================================== */
+
+.floor-detail-card {
+
+  margin: 0 20px 20px;
+
+  min-height: 72px;
+
+  padding: 10px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  background: #E3E3E3;
+
+  border-radius: 15px;
+
+}
+
+
+.floor-icon {
+
+  width: 50px;
+
+  height: 50px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #EFEFEF;
+
+  flex-shrink: 0;
+
+}
+
+
+.floor-icon svg {
+
+  width: 32px;
+
+  height: 32px;
+
+}
+
+
+.floor-name {
+
+  flex: 1;
+
+  font-size: 16px;
+
+  font-weight: 500;
+
+}
+
+
+.floor-edit-button {
+
+  width: 38px;
+
+  height: 38px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: transparent;
+
+  color: #111111;
+
+}
+
+
+.floor-edit-button svg {
+
+  width: 23px;
+
+  height: 23px;
+
+}
+
+
+
+/* =====================================================
+   MAP INFORMATION
+===================================================== */
+
+.map-information {
+
+  padding: 0 20px;
+
+}
+
+
+.detail-field {
+
+  margin-bottom: 14px;
+
+}
+
+
+.detail-field label {
+
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-size: 15px;
+
+  line-height: 1.3;
+
+  font-weight: 500;
+
+  color: #202020;
+
+}
+
+
+.detail-input,
+.detail-textarea {
+
+  width: 100%;
+
+  border: 1px solid #E8E8E8;
+
+  border-radius: 8px;
+
+  background: #FFFFFF;
+
+  color: #3B3B3F;
+
+  font-size: 13px;
+
+}
+
+
+.detail-input {
+
+  min-height: 35px;
+
+  padding: 8px 10px;
+
+}
+
+
+.detail-textarea {
+
+  min-height: 58px;
+
+  padding: 9px 10px;
+
+  line-height: 1.4;
+
+}
+
+
+
+/* =====================================================
+   MAP DETAIL BUTTON
+===================================================== */
+
+.map-detail-bottom {
+
+  position: absolute;
+
+  left: 16px;
+
+  right: 16px;
+
+  bottom: 24px;
+
+}
+
+
+
+/* =====================================================
+   MAP EDITOR
+===================================================== */
+
+.map-editor-screen {
+
+  min-height: 852px;
+
+  position: relative;
+
+  background: var(--white);
+
+  overflow: hidden;
+
+}
+
+
+.editor-header {
+
+  padding:
+    48px 18px 24px;
+
+  gap: 14px;
+
+}
+
+
+.editor-header h1 {
+
+  font-size: 24px;
+
+  line-height: 1.2;
+
+  font-weight: 700;
+
+}
+
+
+
+/* =====================================================
+   MAP CANVAS
+===================================================== */
+
+.map-editor-area {
+
+  position: absolute;
+
+  top: 110px;
+
+  left: 20px;
+
+  right: 20px;
+
+  bottom: 150px;
+
+}
+
+
+.map-canvas {
+
+  position: relative;
+
+  width: 100%;
+
+  height: 100%;
+
+  min-height: 350px;
+
+  border-radius: 14px;
+
+  background: #F1F1F1;
+
+  overflow: hidden;
+
+  touch-action: none;
+
+}
+
+
+
+/*
+  Subtle grid.
+*/
+
+.map-canvas::before {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background-image:
+    linear-gradient(
+      #E4E4E4 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      #E4E4E4 1px,
+      transparent 1px
+    );
+
+  background-size: 25px 25px;
+
+  pointer-events: none;
+
+}
+
+
+
+/* =====================================================
+   MAP OBJECTS
+===================================================== */
+
+.map-object {
+
+  position: absolute;
+
+  z-index: 5;
+
+  cursor: grab;
+
+  touch-action: none;
+
+  user-select: none;
+
+  transition:
+    box-shadow 0.1s ease,
+    transform 0.1s ease;
+
+}
+
+
+.map-object.dragging {
+
+  cursor: grabbing;
+
+  transform: scale(1.04);
+
+  z-index: 20;
+
+}
+
+
+.map-object.selected {
+
+  box-shadow:
+    0 0 0 2px var(--blue);
+
+}
+
+
+
+/* TABLE */
+
+.map-object-table {
+
+  width: 58px;
+
+  height: 42px;
+
+  border-radius: 5px;
+
+  background: #7A7E82;
+
+}
+
+
+
+/* CHAIR */
+
+.map-object-chair {
+
+  width: 30px;
+
+  height: 30px;
+
+  border-radius: 5px;
+
+  background: #7A7E82;
+
+}
+
+
+
+/* MEETING / ELEVATOR */
+
+.map-object-meeting {
+
+  width: 48px;
+
+  height: 48px;
+
+  border-radius: 7px;
+
+  background: var(--yellow);
+
+}
+
+
+.map-object-meeting::after {
+
+  content: "↕";
+
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: #333;
+
+  font-size: 18px;
+
+  font-weight: 700;
+
+}
+
+
+
+/* DOOR */
+
+.map-object-door {
+
+  width: 48px;
+
+  height: 12px;
+
+  border-radius: 3px;
+
+  background: #888B8E;
+
+}
+
+
+
+/* WALL */
+
+.map-object-wall {
+
+  width: 80px;
+
+  height: 14px;
+
+  border-radius: 2px;
+
+  background: #777A7D;
+
+}
+
+
+
+/* =====================================================
+   TOOLBAR
+===================================================== */
+
+.map-toolbar {
+
+  position: absolute;
+
+  left: 0;
+
+  right: 0;
+
+  bottom: 0;
+
+  height: 135px;
+
+  padding: 10px 10px 16px;
+
+  background: #E5E5E5;
+
+  border-radius:
+    16px 16px 0 0;
+
+  z-index: 50;
+
+}
+
+
+.tool-list {
+
+  width: 100%;
+
+  height: 57px;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 16px;
+
+  overflow-x: auto;
+
+  scrollbar-width: none;
+
+}
+
+
+.tool-list::-webkit-scrollbar {
+
+  display: none;
+
+}
+
+
+.map-tool {
+
+  width: 36px;
+
+  min-width: 36px;
+
+  height: 55px;
+
+  padding: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 5px;
+
+  background: transparent;
+
+  color: #222222;
+
+  font-family: inherit;
+
+}
+
+
+.map-tool > span:last-child {
+
+  font-size: 10px;
+
+  line-height: 1;
+
+  white-space: nowrap;
+
+}
+
+
+.tool-icon {
+
+  width: 36px;
+
+  height: 36px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+}
+
+
+.add-tool-icon {
+
+  border-radius: 50%;
+
+  background: #111111;
+
+  color: #FFFFFF;
+
+}
+
+
+.add-tool-icon svg {
+
+  width: 25px;
+
+  height: 25px;
+
+}
+
+
+.tool-object {
+
+  width: 36px;
+
+  height: 36px;
+
+  display: block;
+
+  background: #777A7D;
+
+}
+
+
+.table-object {
+
+  border-radius: 2px;
+
+}
+
+
+.chair-object {
+
+  width: 30px;
+
+  height: 30px;
+
+  border-radius: 3px;
+
+}
+
+
+.meeting-object {
+
+  border-radius: 3px;
+
+  background: #777A7D;
+
+}
+
+
+.door-object {
+
+  height: 28px;
+
+  border-radius: 2px;
+
+}
+
+
+.wall-object {
+
+  width: 36px;
+
+  height: 36px;
+
+  background: #777A7D;
+
+}
+
+
+
+/* =====================================================
+   SUBMIT
+===================================================== */
+
+.submit-map-button {
+
+  width: 100%;
+
+  height: 52px;
+
+  margin-top: 8px;
+
+  border-radius: 26px;
+
+  background: var(--blue);
+
+  color: var(--white);
+
+  font-family: inherit;
+
+  font-size: 16px;
+
+  font-weight: 700;
+
+  transition:
+    transform 0.15s ease,
+    filter 0.15s ease;
+
+}
+
+
+.submit-map-button:hover {
+
+  filter: brightness(0.96);
+
+}
+
+
+.submit-map-button:active {
+
+  transform: scale(0.98);
+
+}
+
+
+
+/* =====================================================
+   DESKTOP PREVIEW
+===================================================== */
+
+@media (min-width: 600px) {
+
+  .map-detail-screen,
+  .map-editor-screen {
+
+    min-height: 852px;
+
+    margin: 30px 0;
+
+    border-radius: 12px;
+
+    box-shadow:
+      0 20px 60px rgba(0, 0, 0, 0.2);
+
+  }
+
+}

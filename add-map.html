@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>INSITE — Thêm bản đồ</title>
+
+  <!-- Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="navbar.css">
+
+</head>
+
+
+<body>
+
+  <main class="app">
+
+    <section class="screen map-form-screen">
+
+
+      <!-- ==================== HEADER ==================== -->
+
+      <header class="page-header map-form-header">
+
+        <button
+          class="back-button"
+          id="formBackButton"
+          type="button"
+          aria-label="Quay lại"
+        >
+
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+
+            <path d="M15 18L9 12L15 6"></path>
+
+          </svg>
+
+        </button>
+
+
+        <h1 id="formTitle">
+          Thêm bản đồ
+        </h1>
+
+      </header>
+
+
+      <!-- ==================== FORM ==================== -->
+
+      <form
+        class="map-form"
+        id="mapForm"
+      >
+
+
+        <!-- MAP NAME -->
+
+        <div class="form-field">
+
+          <label for="mapName">
+            Tên bản đồ
+          </label>
+
+          <input
+            id="mapName"
+            name="mapName"
+            type="text"
+            placeholder="Ví dụ: Văn phòng công ty A..."
+            autocomplete="off"
+            required
+          >
+
+        </div>
+
+
+        <!-- ADDRESS -->
+
+        <div class="form-field">
+
+          <label for="mapAddress">
+            Địa chỉ
+          </label>
+
+          <input
+            id="mapAddress"
+            name="mapAddress"
+            type="text"
+            placeholder="Ví dụ: 12, Man Thiện, Q9, TP..."
+            autocomplete="street-address"
+            required
+          >
+
+        </div>
+
+
+        <!-- FLOOR -->
+
+        <div class="form-field">
+
+          <label for="mapFloors">
+            Số tầng
+          </label>
+
+          <input
+            id="mapFloors"
+            name="mapFloors"
+            type="number"
+            min="1"
+            max="100"
+            placeholder="3"
+            required
+          >
+
+        </div>
+
+
+        <!-- ==================== OPTIONAL ==================== -->
+
+        <div class="form-hint">
+
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            aria-hidden="true"
+          >
+
+            <circle
+              cx="12"
+              cy="12"
+              r="9"
+            ></circle>
+
+            <path d="M12 10V16"></path>
+
+            <path d="M12 7H12.01"></path>
+
+          </svg>
+
+          <span>
+            Bạn có thể thêm hoặc chỉnh sửa thông tin
+            bản đồ sau khi tạo.
+          </span>
+
+        </div>
+
+
+        <!-- ==================== BOTTOM ==================== -->
+
+        <div class="map-form-bottom">
+
+          <button
+            class="primary-button"
+            type="submit"
+            id="formSubmitButton"
+          >
+            Bắt đầu tạo bản đồ
+          </button>
+
+        </div>
+
+
+      </form>
+
+
+    </section>
+
+  </main>
+
+
+  <script>
+
+    /* =====================================================
+       MAP FORM
+    ===================================================== */
+
+    const params =
+      new URLSearchParams(
+        window.location.search
+      );
+
+    const mode =
+      params.get("mode") || "add";
+
+
+    const formTitle =
+      document.getElementById("formTitle");
+
+    const formSubmitButton =
+      document.getElementById(
+        "formSubmitButton"
+      );
+
+    const form =
+      document.getElementById("mapForm");
+
+    const backButton =
+      document.getElementById(
+        "formBackButton"
+      );
+
+
+    const mapName =
+      document.getElementById("mapName");
+
+    const mapAddress =
+      document.getElementById("mapAddress");
+
+    const mapFloors =
+      document.getElementById("mapFloors");
+
+
+    /* =====================================================
+       EDIT MODE
+    ===================================================== */
+
+    if (mode === "edit") {
+
+      document.title =
+        "INSITE — Chỉnh sửa bản đồ";
+
+      formTitle.textContent =
+        "Chỉnh sửa bản đồ";
+
+      formSubmitButton.textContent =
+        "Lưu thay đổi";
+
+
+      /*
+        Demo data.
+        Sau này có thể lấy từ database.
+      */
+
+      mapName.value =
+        "Văn phòng công ty A";
+
+      mapAddress.value =
+        "12, Man Thiện, Q9, TP.HCM";
+
+      mapFloors.value =
+        "3";
+
+    }
+
+
+    /* =====================================================
+       BACK
+    ===================================================== */
+
+    backButton.addEventListener(
+      "click",
+      () => {
+
+        window.location.href =
+  "map-detail.html";
+
+      }
+    );
+
+
+
+  /* =====================================================
+     SUBMIT
+  ===================================================== */
+
+  form.addEventListener(
+    "submit",
+    (event) => {
+
+      event.preventDefault();
+
+      const mapData = {
+
+        name:
+          mapName.value.trim(),
+
+        address:
+          mapAddress.value.trim(),
+
+        floors:
+          Number(mapFloors.value)
+
+      };
+
+
+      /* ====================
+         VALIDATION
+      ==================== */
+
+      if (
+        !mapData.name ||
+        !mapData.address ||
+        !mapData.floors
+      ) {
+
+        alert(
+          "Vui lòng điền đầy đủ thông tin bản đồ."
+        );
+
+        return;
+
+      }
+
+
+      /* ====================
+         SAVE PROTOTYPE DATA
+      ==================== */
+
+      localStorage.setItem(
+        "insiteMap",
+        JSON.stringify(mapData)
+      );
+
+
+      /* ====================
+         NEXT SCREEN
+      ==================== */
+
+      if (mode === "edit") {
+
+        // Chỉnh sửa xong → quay về chi tiết bản đồ
+        window.location.href = "map-detail.html";
+
+      } else {
+
+        // Tạo bản đồ mới → sang Bản đồ chi tiết
+        window.location.href = "map-detail.html";
+
+      }
+
+    }
+  );
+</script>
+
+</body>
+
+</html>

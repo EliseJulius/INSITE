@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>INSITE — Thêm / sửa bản đồ</title>
+
+  <!-- Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="navbar.css">
+
+</head>
+
+
+<body>
+
+  <main class="app">
+
+    <section class="screen map-management-screen">
+
+
+      <!-- ==================== HEADER ==================== -->
+
+      <header class="page-header map-page-header">
+
+        <button
+          class="back-button"
+          id="mapBackButton"
+          type="button"
+          aria-label="Quay lại"
+        >
+
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M15 18L9 12L15 6"></path>
+          </svg>
+
+        </button>
+
+
+        <h1>
+          Thêm / sửa bản đồ
+        </h1>
+
+      </header>
+
+
+      <!-- ==================== OPTIONS ==================== -->
+
+      <section class="map-options">
+
+
+        <!-- ADD MAP -->
+
+        <button
+          class="map-option-card"
+          id="addMapButton"
+          type="button"
+        >
+
+          <span class="map-option-icon add-map-icon">
+
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.4"
+              stroke-linecap="round"
+              aria-hidden="true"
+            >
+
+              <path d="M12 5V19"></path>
+
+              <path d="M5 12H19"></path>
+
+            </svg>
+
+          </span>
+
+
+          <strong>
+            Thêm bản đồ
+          </strong>
+
+
+          <span>
+            Bắt đầu tạo không gian mới từ đầu.
+          </span>
+
+        </button>
+
+
+
+        <!-- EDIT MAP -->
+
+        <button
+          class="map-option-card"
+          id="editMapButton"
+          type="button"
+        >
+
+          <span class="map-option-icon edit-map-icon">
+
+            <svg
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+
+              <path
+                d="M4 17.25V21h3.75L18.81 9.94l-3.75-3.75L4 17.25Z"
+              ></path>
+
+              <path
+                d="M20.71 7.04a1 1 0 0 0 0-1.41l-2.34-2.34a1 1 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83Z"
+              ></path>
+
+            </svg>
+
+          </span>
+
+
+          <strong>
+            Chỉnh sửa bản đồ
+          </strong>
+
+
+          <span>
+            Thay đổi khu vực, điểm đến và thông tin
+            trên bản đồ bạn đã tạo.
+          </span>
+
+        </button>
+
+
+      </section>
+
+
+      <!-- ==================== BOTTOM ACTION ==================== -->
+
+      <div class="map-bottom-action">
+
+        <button
+          class="primary-button"
+          id="bottomCreateButton"
+          type="button"
+        >
+          Bắt đầu tạo bản đồ
+        </button>
+
+      </div>
+
+
+    </section>
+
+  </main>
+
+
+  <script>
+
+    /* =====================================================
+       MAP MANAGEMENT
+    ===================================================== */
+
+    const backButton =
+      document.getElementById("mapBackButton");
+
+    const addMapButton =
+      document.getElementById("addMapButton");
+
+    const editMapButton =
+      document.getElementById("editMapButton");
+
+    const bottomCreateButton =
+      document.getElementById("bottomCreateButton");
+
+
+    /* ==================== BACK ==================== */
+
+    backButton.addEventListener("click", () => {
+
+      window.location.href = "profile.html";
+
+    });
+
+
+    /* ==================== ADD MAP ==================== */
+
+    addMapButton.addEventListener("click", () => {
+
+      window.location.href =
+        "add-map.html?mode=add";
+
+    });
+
+
+    /* ==================== EDIT MAP ==================== */
+
+    editMapButton.addEventListener("click", () => {
+
+      window.location.href =
+        "add-map.html?mode=edit";
+
+    });
+
+
+    /* ==================== BOTTOM BUTTON ==================== */
+
+    bottomCreateButton.addEventListener("click", () => {
+
+      window.location.href =
+        "add-map.html?mode=add";
+
+    });
+
+  </script>
+
+</body>
+
+</html>

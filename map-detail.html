@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>INSITE — Bản đồ chi tiết</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+  <main class="app">
+
+    <section class="screen map-detail-screen">
+
+
+      <!-- ==================== HEADER ==================== -->
+
+      <header class="page-header map-detail-header">
+
+        <button
+          class="back-button"
+          id="detailBackButton"
+          type="button"
+          aria-label="Quay lại"
+        >
+
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+
+            <path d="M15 18L9 12L15 6"></path>
+
+          </svg>
+
+        </button>
+
+
+        <h1>
+          Bản đồ chi tiết
+        </h1>
+
+      </header>
+
+
+
+      <!-- ==================== FLOOR CARD ==================== -->
+
+      <section class="floor-detail-card">
+
+        <div class="floor-icon">
+
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            aria-hidden="true"
+          >
+
+            <path
+              d="M7 3h10v18H7z"
+              fill="#F7DE70"
+            ></path>
+
+            <path
+              d="M9 5h2v3H9zM13 5h2v3h-2zM9 10h2v3H9zM13 10h2v3h-2zM9 15h2v3H9zM13 15h2v3h-2z"
+              fill="#FFFFFF"
+            ></path>
+
+          </svg>
+
+        </div>
+
+
+        <span class="floor-name">
+          Tầng 1
+        </span>
+
+
+        <button
+          class="floor-edit-button"
+          id="editFloorButton"
+          type="button"
+          aria-label="Chỉnh sửa tầng"
+        >
+
+          <svg
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+
+            <path
+              d="M4 17.25V21h3.75L18.81 9.94l-3.75-3.75L4 17.25Z"
+            ></path>
+
+            <path
+              d="M20.71 7.04a1 1 0 0 0 0-1.41l-2.34-2.34a1 1 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83Z"
+            ></path>
+
+          </svg>
+
+        </button>
+
+      </section>
+
+
+
+      <!-- ==================== DETAILS ==================== -->
+
+      <section class="map-information">
+
+
+        <div class="detail-field">
+
+          <label>
+            Loại
+          </label>
+
+          <div class="detail-input">
+            Khu vực làm việc chung
+          </div>
+
+        </div>
+
+
+        <div class="detail-field">
+
+          <label>
+            Số điểm đến
+          </label>
+
+          <div class="detail-input">
+            8
+          </div>
+
+        </div>
+
+
+        <div class="detail-field">
+
+          <label>
+            Lưu ý
+          </label>
+
+          <div class="detail-textarea">
+            Lối đi hẹp, nhiều bàn ghế
+          </div>
+
+        </div>
+
+
+      </section>
+
+
+
+      <!-- ==================== CONTINUE ==================== -->
+
+      <div class="map-detail-bottom">
+
+        <button
+          class="primary-button"
+          id="continueMapButton"
+          type="button"
+        >
+          Tiếp tục
+        </button>
+
+      </div>
+
+
+    </section>
+
+  </main>
+
+
+  <script>
+
+    const backButton =
+      document.getElementById("detailBackButton");
+
+    const continueButton =
+      document.getElementById("continueMapButton");
+
+
+    /*
+      Back:
+      quay về màn hình thêm / sửa bản đồ
+    */
+
+    backButton.addEventListener("click", () => {
+
+      window.location.href =
+        "manage-map.html";
+
+    });
+
+
+    /*
+      Continue:
+      đi đến trình chỉnh sửa bản đồ
+    */
+
+    continueButton.addEventListener("click", () => {
+
+      window.location.href =
+        "map-editor.html";
+
+    });
+
+  </script>
+
+</body>
+
+</html>
